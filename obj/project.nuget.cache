@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "2Xq5xJAXnqOC4fXqdZaElpDKsoH9jQUfGfW2XyJ0ziAMIL06wXIllsl6Aa/kPYPdK9wtKwTTPM3qvIdtTobEPg==",
+  "dgSpecHash": "YqerCFmn/kximwHCzhCnz+u8/XcpQtU/ug32gBIZ0Oxm85944FuZRB9ZsopMCPeaidwPKqZkE/9D1U30UqvqGw==",
   "success": true,
   "projectFilePath": "C:\\Users\\gkadi\\source\\repos\\ASP.NetCoreIdentity\\ASP.NetCoreIdentity\\ASP.NetCoreIdentity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gkadi\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\gkadi\\.nuget\\packages\\mapster\\7.2.0\\mapster.7.2.0.nupkg.sha512",
+    "C:\\Users\\gkadi\\.nuget\\packages\\mapster.core\\1.2.0\\mapster.core.1.2.0.nupkg.sha512",
     "C:\\Users\\gkadi\\.nuget\\packages\\microsoft.aspnetcore.authentication.facebook\\5.0.5\\microsoft.aspnetcore.authentication.facebook.5.0.5.nupkg.sha512",
     "C:\\Users\\gkadi\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\5.0.5\\microsoft.aspnetcore.authentication.google.5.0.5.nupkg.sha512",
     "C:\\Users\\gkadi\\.nuget\\packages\\microsoft.aspnetcore.authentication.microsoftaccount\\5.0.5\\microsoft.aspnetcore.authentication.microsoftaccount.5.0.5.nupkg.sha512",

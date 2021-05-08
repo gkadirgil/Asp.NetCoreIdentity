@@ -9,7 +9,6 @@ C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\bin\Debug\ne
 C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\bin\Debug\net5.0\ASP.NetCoreIdentity.pdb
 C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\bin\Debug\net5.0\ASP.NetCoreIdentity.Views.dll
 C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\bin\Debug\net5.0\ASP.NetCoreIdentity.Views.pdb
-C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\ASP.NetCoreIdentity.csprojAssemblyReference.cache
 C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\ASP.NetCoreIdentity.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\ASP.NetCoreIdentity.AssemblyInfoInputs.cache
 C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\ASP.NetCoreIdentity.AssemblyInfo.cs
@@ -158,3 +157,9 @@ C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\ne
 C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Member\Index.cshtml.g.cs
 C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Home\ResetPassword.cshtml.g.cs
 C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Home\ResetPasswordConfirm.cshtml.g.cs
+C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Shared\_MemberLayout.cshtml.g.cs
+C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\bin\Debug\net5.0\Mapster.dll
+C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\bin\Debug\net5.0\Mapster.Core.dll
+C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\ASP.NetCoreIdentity.csprojAssemblyReference.cache
+C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Member\PasswordChange.cshtml.g.cs
+C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Member\UserEdit.cshtml.g.cs
