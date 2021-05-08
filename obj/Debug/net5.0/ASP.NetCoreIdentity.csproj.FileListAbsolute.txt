@@ -156,3 +156,5 @@ C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\ne
 C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Home\SignUp.cshtml.g.cs
 C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Home\Login.cshtml.g.cs
 C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Member\Index.cshtml.g.cs
+C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Home\ResetPassword.cshtml.g.cs
+C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Home\ResetPasswordConfirm.cshtml.g.cs
