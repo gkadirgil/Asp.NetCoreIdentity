@@ -146,5 +146,22 @@ namespace ASP.NetCoreIdentity.Controllers
         {
             _signInManager.SignOutAsync();
         }
+
+        public IActionResult AccessDenied()
+        {
+            return View();
+        }
+
+        [Authorize(Roles ="Editor,Admin")]
+        public IActionResult Editor()
+        {
+            return View();
+        }
+
+        [Authorize(Roles = "Manager,Admin")]
+        public IActionResult Manager()
+        {
+            return View();
+        }
     }
 }

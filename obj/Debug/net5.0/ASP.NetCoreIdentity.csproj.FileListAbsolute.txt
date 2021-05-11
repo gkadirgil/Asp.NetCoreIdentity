@@ -163,3 +163,11 @@ C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\bin\Debug\ne
 C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\ASP.NetCoreIdentity.csprojAssemblyReference.cache
 C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Member\PasswordChange.cshtml.g.cs
 C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Member\UserEdit.cshtml.g.cs
+C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Member\AccessDenied.cshtml.g.cs
+C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Admin\Users.cshtml.g.cs
+C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Admin\RoleCreate.cshtml.g.cs
+C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Admin\Roles.cshtml.g.cs
+C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Admin\RoleUpdate.cshtml.g.cs
+C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Admin\RoleAssign.cshtml.g.cs
+C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Member\Editor.cshtml.g.cs
+C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Member\Manager.cshtml.g.cs

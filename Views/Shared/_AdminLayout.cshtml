@@ -7,15 +7,16 @@
 
     <!--jQuery JavaScript Library v3.5.1-->
     <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
 
     <!--Bootstrap v4.6.0-->
     <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
 
 </head>
 <body>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
             <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -23,24 +24,27 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        <a class="nav-link " asp-action="Index" asp-controller="Admin" aria-current="page">Admin Anasayfa</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10">
+                @RenderBody()
+            </div>
+            <div class="col-md-2">
+                <h3>Menü</h3>
+                <a class="btn btn-danger btn-block" asp-action="Users" asp-controller="Admin">Üyeler</a>
 
-    <div>
-        @RenderBody()
+                <a class="btn btn-danger btn-block" asp-action="Roles" asp-controller="Admin">Roller</a>
+
+                <a class="btn btn-danger btn-block" asp-action="Logout" asp-controller="Member" asp-route-returnUrl="/Home/Index">Çıkış Yap</a>
+            </div>
+        </div>
+
     </div>
 </body>
 </html>

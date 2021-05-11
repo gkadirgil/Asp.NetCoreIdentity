@@ -58,6 +58,8 @@ namespace ASP.NetCoreIdentity
             cookieBuilder.HttpOnly = false;
             cookieBuilder.SameSite = SameSiteMode.Lax;
             cookieBuilder.SecurePolicy = CookieSecurePolicy.SameAsRequest;
+
+
             services.ConfigureApplicationCookie(opt =>
             {
                 opt.LoginPath = new PathString("/Home/Login");
@@ -65,6 +67,7 @@ namespace ASP.NetCoreIdentity
                 opt.Cookie = cookieBuilder;
                 opt.SlidingExpiration = true;
                 opt.ExpireTimeSpan = System.TimeSpan.FromDays(60);
+                opt.AccessDeniedPath = new PathString("/Member/AccessDenied");
             });
 
             services.AddMvc();
