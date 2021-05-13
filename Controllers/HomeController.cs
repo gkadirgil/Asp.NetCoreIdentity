@@ -11,10 +11,10 @@ namespace ASP.NetCoreIdentity.Controllers
 {
     public class HomeController : BaseController
     {
-        
-        public HomeController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager):base(userManager,signInManager)
+
+        public HomeController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager) : base(userManager, signInManager)
         {
-          
+
         }
         public IActionResult Index()
         {
@@ -45,6 +45,16 @@ namespace ASP.NetCoreIdentity.Controllers
 
                 if (result.Succeeded)
                 {
+                    string confirmationToken = await _userManager.GenerateEmailConfirmationTokenAsync(user); //Token oluşturulur
+                    string link = Url.Action("ConfirmEmail", "Home", new
+                    {
+                        userId = user.Id,
+                        token = confirmationToken
+                    }, protocol: HttpContext.Request.Scheme
+                    );
+
+                    Helper.EmailConfirmation.EmailConfirmSendEmail(link, user.Email);
+
                     return RedirectToAction("Login");
 
                 }
@@ -79,6 +89,17 @@ namespace ASP.NetCoreIdentity.Controllers
 
                         return View(userLogin);
                     }
+
+
+                    //Email doğrulama işleminin kontrolü
+                    if (_userManager.IsEmailConfirmedAsync(user).Result == false)
+                    {
+                        ModelState.AddModelError("", "Email adresiniz doğrulanmamıştır. Lütfen epastanızı kontrol ediniz.");
+
+                        return View(userLogin);
+                    }
+
+
                     await _signInManager.SignOutAsync();
                     //daha önceden var olan cookie siler
 
@@ -149,7 +170,7 @@ namespace ASP.NetCoreIdentity.Controllers
                     token = passwordResetToken//query string
                 }, HttpContext.Request.Scheme);
 
-                Helper.PasswordReset.PasswordResetEmail(passwordResetLink);
+                Helper.PasswordReset.PasswordResetEmail(passwordResetLink, user.Email);
 
                 ViewBag.status = "success";
 
@@ -200,5 +221,28 @@ namespace ASP.NetCoreIdentity.Controllers
 
             return View(passwordResetViewModel);
         }
+
+        public async Task<IActionResult> ConfirmEmail(string userId, string token)
+        {
+            var user = await _userManager.FindByIdAsync(userId);
+
+            IdentityResult result = await _userManager.ConfirmEmailAsync(user, token); //Link ile gelen Querystring'den alınan token ve user geçerli değerler ise bu metot database'deki dbo.AspNetUsers->EmailConfirmed değerini true yapacak.
+
+            if (result.Succeeded)
+            {
+
+                ViewBag.status = true;
+            }
+
+            else
+            {
+                ViewBag.status = false;
+            }
+
+            return View();
+
+        }
+
+
     }
 }

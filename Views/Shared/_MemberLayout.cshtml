@@ -35,6 +35,7 @@
                     <li class="nav-item">
                         <a class="btn btn-info" asp-action="Manager" asp-controller="Member" aria-current="page">Manager Anasayfa</a>
                     </li>
+                   
                 </ul>
             </div>
         </div>
@@ -51,6 +52,10 @@
                 <a class="btn btn-info btn-block" asp-action="UserEdit" asp-controller="Member">Bilgi Güncelleme</a>
 
                 <a class="btn btn-info btn-block" asp-action="Logout" asp-controller="Member" asp-route-returnUrl="/Home/Index">Çıkış Yap</a>
+                <a class="btn btn-danger btn-block" asp-action="AnkaraPage" asp-controller="Member" aria-current="page">AnkaraSayfa</a>
+
+                <a class="btn btn-danger btn-block" asp-action="ViolancePage" asp-controller="Member" aria-current="page">ŞiddetSayfa</a>
+                <a class="btn btn-danger btn-block" asp-action="ExChangeRedirect" asp-controller="Member" aria-current="page">BorsaBilgileri</a>
             </div>
         </div>
       

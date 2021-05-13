@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "ConfirmEmail";
+}
+
+@if (ViewBag.status)
+{
+    <div class="alert alert-success mt-4">
+        Email adresiniz doğrulanmıştır. Login Ekranından giriş yapabilirsiniz.
+    </div>
+}
+else
+{
+    <div class="alert alert-success mt-4">
+        Bir hata meydana geldi. Lütfen daha sonra tekrar deneyiniz.
+    </div>
+
+}
+
+<div>
+    <a asp-action="Login" asp-controller="Home">Giriş Yap</a>
+</div>
+

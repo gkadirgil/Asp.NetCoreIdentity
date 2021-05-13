@@ -171,3 +171,8 @@ C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\ne
 C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Admin\RoleAssign.cshtml.g.cs
 C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Member\Editor.cshtml.g.cs
 C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Member\Manager.cshtml.g.cs
+C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Admin\Claims.cshtml.g.cs
+C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Member\AnkaraPage.cshtml.g.cs
+C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Member\ViolancePage.cshtml.g.cs
+C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Member\Exchange.cshtml.g.cs
+C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Home\ConfirmEmail.cshtml.g.cs

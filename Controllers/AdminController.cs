@@ -24,6 +24,11 @@ namespace ASP.NetCoreIdentity.Controllers
             return View(_userManager.Users.ToList());
         }
 
+        public IActionResult Claims()
+        {
+            return View(User.Claims.ToList());
+        }
+
         [HttpGet]
         public IActionResult RoleCreate()
         {

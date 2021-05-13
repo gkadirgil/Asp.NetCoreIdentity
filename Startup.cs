@@ -1,5 +1,7 @@
 using ASP.NetCoreIdentity.CustomValidation;
 using ASP.NetCoreIdentity.Models;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -28,12 +30,37 @@ namespace ASP.NetCoreIdentity
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IAuthorizationHandler, ExpireDateExchangeHandler>();
             services.AddRazorPages();
 
             services.AddDbContext<AppIdentityDbContext>(options =>
             {
                 options.UseSqlServer(Configuration["ConnectionStrings:SqlConStr"]);
             });
+
+            services.AddAuthorization(options=> 
+            {
+                options.AddPolicy("AnkaraPolicy",policy=>
+                {
+                    policy.RequireClaim("city","ankara"); // 1.Kýsýtlama
+                    //policy.RequireRole("Editor");//2. Kýsýtlama=> Kullanýcýnýn city:ankara ve role:editor olmasý zorunlu
+                }); //AddPolic: Kýsýtlama Oluþturulur. RequireClaim: Oluþturulan Kýsýtlamada Zorunlu istenecek Claimleri ata.
+
+                options.AddPolicy("ViolancePolicy", policy=>
+                {
+                    policy.RequireClaim("violance");
+                });
+
+                options.AddPolicy("ExchangePolicy", policy =>
+                 {
+                     policy.AddRequirements(new ExpireDateExchangeRequirement());
+                 });
+
+            });
+
+
+
+
 
             services.AddIdentity<AppUser, AppRole>(opt =>
             {
@@ -70,6 +97,7 @@ namespace ASP.NetCoreIdentity
                 opt.AccessDeniedPath = new PathString("/Member/AccessDenied");
             });
 
+            services.AddScoped<IClaimsTransformation, ClaimProvider.ClaimProvider>();
             services.AddMvc();
         }
 

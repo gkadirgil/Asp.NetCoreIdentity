@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ASP.NetCoreIdentity.Helper
 {
-    public static class PasswordReset
+    public static class EmailConfirmation
     {
-        public static void PasswordResetEmail(string link,string email)
+        public static void EmailConfirmSendEmail(string link, string email)
         {
             MailMessage mail = new MailMessage();
 
@@ -16,8 +16,8 @@ namespace ASP.NetCoreIdentity.Helper
 
             mail.From = new MailAddress("mymail@mail.com");
             mail.To.Add(email);
-            mail.Subject = "Şifre Sıfırlama";
-            mail.Body = "<h2>Şifrenizi yenilemek için lütfen aşağıdaki linke tıklayınız.</h2><hr/>";
+            mail.Subject = "Email Doğrulama";
+            mail.Body = "<h2>Email adresinizi doğrulamak için lütfen aşağıdaki linke tıklayınız.</h2><hr/>";
             mail.Body += $"<a href='{link}'>şifre yenileme linki</a>";
             mail.IsBodyHtml = true;
 
