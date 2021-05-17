@@ -38,15 +38,15 @@ namespace ASP.NetCoreIdentity
                 options.UseSqlServer(Configuration["ConnectionStrings:SqlConStr"]);
             });
 
-            services.AddAuthorization(options=> 
+            services.AddAuthorization(options =>
             {
-                options.AddPolicy("AnkaraPolicy",policy=>
-                {
-                    policy.RequireClaim("city","ankara"); // 1.Kýsýtlama
-                    //policy.RequireRole("Editor");//2. Kýsýtlama=> Kullanýcýnýn city:ankara ve role:editor olmasý zorunlu
+                options.AddPolicy("AnkaraPolicy", policy =>
+                 {
+                     policy.RequireClaim("city", "ankara"); // 1.Kýsýtlama
+                                                            //policy.RequireRole("Editor");//2. Kýsýtlama=> Kullanýcýnýn city:ankara ve role:editor olmasý zorunlu
                 }); //AddPolic: Kýsýtlama Oluþturulur. RequireClaim: Oluþturulan Kýsýtlamada Zorunlu istenecek Claimleri ata.
 
-                options.AddPolicy("ViolancePolicy", policy=>
+                options.AddPolicy("ViolancePolicy", policy =>
                 {
                     policy.RequireClaim("violance");
                 });
@@ -58,8 +58,15 @@ namespace ASP.NetCoreIdentity
 
             });
 
-
-
+            services.AddAuthentication().AddFacebook(option =>
+            {
+                option.AppId = Configuration["Authentication:Facebook.AppId"];
+                option.AppSecret = Configuration["Authentication:Facebook.AppSecret"];
+            }).AddGoogle(option =>
+            {
+                option.ClientId = Configuration["Authentication:Google.ClientId"];
+                option.ClientSecret = Configuration["Authentication:Google.ClientSecret"];
+            });
 
 
             services.AddIdentity<AppUser, AppRole>(opt =>
@@ -126,7 +133,7 @@ namespace ASP.NetCoreIdentity
 
             app.UseAuthorization();
 
-           
+
 
             app.UseEndpoints(endpoints =>
             {

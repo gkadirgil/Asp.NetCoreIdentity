@@ -176,3 +176,5 @@ C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\ne
 C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Member\ViolancePage.cshtml.g.cs
 C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Member\Exchange.cshtml.g.cs
 C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Home\ConfirmEmail.cshtml.g.cs
+C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Member\CreatePasswordLoginWithFacebook.cshtml.g.cs
+C:\Users\gkadi\source\repos\ASP.NetCoreIdentity\ASP.NetCoreIdentity\obj\Debug\net5.0\Razor\Views\Home\Error.cshtml.g.cs

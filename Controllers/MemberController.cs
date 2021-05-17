@@ -17,11 +17,11 @@ namespace ASP.NetCoreIdentity.Controllers
     [Authorize]
     public class MemberController : BaseController
     {
-        
-        public MemberController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager):base(userManager,signInManager)
+
+        public MemberController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager) : base(userManager, signInManager)
         {
-           
-        } 
+
+        }
         public IActionResult Index()
         {
             AppUser user = CurrentUser;
@@ -43,7 +43,7 @@ namespace ASP.NetCoreIdentity.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> UserEdit(UserViewModel userViewModel,IFormFile userPicture)
+        public async Task<IActionResult> UserEdit(UserViewModel userViewModel, IFormFile userPicture)
         {
             ModelState.Remove("Password");
             ViewBag.Gender = new SelectList(Enum.GetNames(typeof(Gender)));
@@ -52,13 +52,13 @@ namespace ASP.NetCoreIdentity.Controllers
             {
                 AppUser user = CurrentUser;
 
-                if (userPicture!=null && userPicture.Length>0)
+                if (userPicture != null && userPicture.Length > 0)
                 {
                     var fileName = Guid.NewGuid().ToString() + Path.GetExtension(userPicture.FileName);
 
                     var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/file", fileName);
 
-                    using (var stream=new FileStream(path,FileMode.Create))
+                    using (var stream = new FileStream(path, FileMode.Create))
                     {
                         await userPicture.CopyToAsync(stream);
                         user.Picture = "/file/" + fileName;
@@ -141,6 +141,41 @@ namespace ASP.NetCoreIdentity.Controllers
             return View(passwordChangeViewModel);
         }
 
+        public IActionResult CreatePasswordLoginWithFacebook()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult CreatePasswordLoginWithFacebook(PasswordChangeViewModel passwordChangeViewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                
+                AppUser user = CurrentUser;
+
+                IdentityResult result = _userManager.ChangePasswordAsync(user, passwordChangeViewModel.PasswordOld, passwordChangeViewModel.PasswordNew).Result;
+
+
+                if (result.Succeeded)
+                {
+                    _userManager.UpdateSecurityStampAsync(user);
+                    _signInManager.SignOutAsync();
+                    _signInManager.PasswordSignInAsync(user, passwordChangeViewModel.PasswordNew, true, false);
+
+                    ViewBag.success = "true";
+
+                }
+                else
+                {
+                    AddModelError(result);
+                }
+
+            }
+
+            return View(passwordChangeViewModel);
+        }
+
         public void Logout()
         {
             _signInManager.SignOutAsync();
@@ -172,7 +207,7 @@ namespace ASP.NetCoreIdentity.Controllers
             return View();
         }
 
-        [Authorize(Roles ="Editor,Admin")]
+        [Authorize(Roles = "Editor,Admin")]
         public IActionResult Editor()
         {
             return View();
@@ -221,4 +256,3 @@ namespace ASP.NetCoreIdentity.Controllers
         }
     }
 }
- 
